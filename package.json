@@ -26,9 +26,9 @@
         "commit": "git-cz",
         "format": "yarn prettier --write",
         "lint": "eslint src/**/*.js react-native-fast-image-example/src/**/*.js",
-        "prepare": "git submodule update --init --recursive",
         "semantic-release": "semantic-release",
         "test": "jest ./src/*.js",
+        "postinstall": "git clone https://github.com/rs/SDWebImage.git ios/Vendor/SDWebImage && cd ios/Vendor/SDWebImage && git submodule update --init --recursive && cd ../../..",
         "prettier": "prettier './**/*.{js,d.ts,js.flow,yml}'"
     },
     "config": {
